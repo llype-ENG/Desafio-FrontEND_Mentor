@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+}
+body{
+    background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    height: 100vh;
+}
+
+.central{
+width: 80vw;
+height: 100vh;
+margin: auto;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background-color:hsl(200, 60%, 99%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top:30px; 
+}
+#Modo{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+#Modo:hover{
+    border: 1px solid hsl(3, 86%, 64%);
+    background-color: hsl(0, 0%, 93%);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.Titulo_Funcoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 10px;
+}
+.Titulo_Funcoes button{
+    padding: 15px;
+    border-radius: 40px;
+    background-color: white;
+    border: 1px solid #ccc; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80px;
+}
+.Titulo_Funcoes button:hover{
+    border: 1px solid hsl(3, 86%, 64%);
+    background-color: hsl(0, 0%, 93%);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.butoes_alteracao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 7px;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* controla o espaçamento entre os blocos */
+    justify-content: space-between; /* distribui bem os blocos */
+} 
+.Quadrados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:hsl(200, 60%, 99%);
+    width: calc((100% - 30px) / 3); /* 100% - (2 gaps de 15px) dividido por 3 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    box-sizing: border-box;
+    height: 170px;
+}
+.tituloQuadrado{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+.Quadrados p{
+    padding-top: 5px;
+}
+.buttonContainer{
+    display: flex;
+    justify-content:space-between ;
+}
+.remove{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid #ccc; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.remove:hover{
+    border: 1px solid hsl(3, 86%, 64%);
+    background-color: hsl(0, 0%, 93%);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+  
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: #ff4b4b; /* vermelho */
+}
+  
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+/* Modo Escuro!!*/
+
+body.ModoEscuro {
+    background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
+    transition: all 0.3s ease;
+    color: hsl(200, 60%, 99%);
+    font-size: 16px;
+}
+body.ModoEscuro .cabecalho{
+    background-color: hsl(227, 75%, 14%);
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+body.ModoEscuro .butoes_alteracao button{
+    color: white;
+    background-color: hsl(226, 25%, 17%);
+    border: 0.5px solid hsl(225, 23%, 24%) ;
+    transition: all 0.3s ease;
+}
+body.ModoEscuro .butoes_alteracao button:hover{
+    border: 1px solid hsl(3, 86%, 64%);
+    background-color: hsl(226, 25%, 17%);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+body.ModoEscuro img{
+    color: white;
+}
+body.ModoEscuro #Modo #iconeModo{
+    outline: none;
+    border: none;
+    background-color: hsl(226, 25%, 17%);
+    transition: all 0.3s ease;
+}
+body.ModoEscuro .Quadrados{
+    background-color: hsl(226, 25%, 17%);
+    border: 0.5px solid hsl(225, 23%, 24%) ;
+    transition: all 0.3s ease;
+}
+body.ModoEscuro .remove{
+    color: white;
+    background-color: hsl(226, 25%, 17%);
+    border: 0.5px solid hsl(225, 23%, 24%) ;
+    transition: all 0.3s ease;
+}
+body.ModoEscuro .remove:hover{
+    border: 1px solid hsl(3, 86%, 64%);
+    background-color: hsl(226, 25%, 17%);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+body.ModoEscuro .slider{
+    color: white;
+    background-color: hsl(225, 23%, 24%);
+    border: 0.5px solid hsl(225, 23%, 24%) ;
+    transition: all 0.3s ease;
+}
+body.ModoEscuro input:checked + .slider{
+        background-color: #ff4b4b; 
+}
+.remove.active {
+    background-color: hsl(3, 77%, 44%);
+    color: white;
+  }
+  

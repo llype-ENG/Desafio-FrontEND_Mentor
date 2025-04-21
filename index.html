@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="central">
+    <div class="cabecalho">
+      <img src="assets/images/logo.svg" alt="ERROR">
+      <button type="submit" id="Modo"><img src="assets/images/icon-moon.svg" alt="Modo Escuro" class="img" id="iconeModo"></button>
+    </div>
+    <div class="Titulo_Funcoes">
+      <h3>Extensions List</h3>
+      <div class="butoes_alteracao">
+        <button type="submit">All</button>
+        <button type="submit">Active</button>
+        <button type="submit">Inactive</button>
+      </div>
+    </div>
+    <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+    <div class="main">
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-devlens.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>DevLens</h3>
+              <p>Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-style-spy.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>StyleSpy</h3>
+              <p>Instantly analyze and copy CSS from any webpage element.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-speed-boost.svg" alt="ERROR">
+            <div class="textoQuadrado">
+              <h3>SpeedBoost</h3>
+              <p>Optimizes browser resource usage to accelerate page loading.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-json-wizard.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>JSONWizard</h3>
+              <p>Formats, validates, and prettifies JSON responses in-browser.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-tab-master-pro.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>TabMaster Pro</h3>
+              <p>Organizes browser tabs into groups and sessions.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-viewport-buddy.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>ViewportBuddy</h3>
+              <p>Simulates various screen resolutions directly within the browser.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-markup-notes.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>Markup Notes</h3>
+              <p>Enables annotation and notes directly onto webpages for collaborative debugging.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-grid-guides.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>GridGuides</h3>
+              <p>Overlay customizable grids and alignment guides on any webpage.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-palette-picker.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>Palette Picker</h3>
+              <p>Instantly extracts color palettes from any webpage.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-link-checker.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>LinkChecker</h3>
+              <p>Scans and highlights broken links on any page.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-dom-snapshot.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>DOM Snapshot</h3>
+              <p>Capture and export DOM structures quickly.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class = "Quadrados">
+          <div class = "tituloQuadrado">
+            <img src="assets/images/logo-console-plus.svg" alt="ERROR">
+            <div class = "textoQuadrado">
+              <h3>ConsolePlus</h3>
+              <p>Enhanced developer console with advanced filtering and logging.</p>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button class = "remove">Remove</button>
+            <label class="switch">
+              <input type="checkbox" id="meuToggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
