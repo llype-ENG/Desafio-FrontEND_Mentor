@@ -26,21 +26,54 @@ document.getElementById("active").addEventListener("click", () => {
     } else {
       quadrado.style.display = "none";
     }
-  });
 
-  document.getElementById("All").addEventListener("click", () => {
-    quadrados.forEach((quadrado) => {
-      quadrado.style.display = "flex"; // ou "flex", "grid" dependendo do layout
-      });
-    });
+    document.getElementById("active").classList.add("botao_ativo");
+
+    document.getElementById("inactive").classList.remove("botao_ativo");
+    document.getElementById("All").classList.remove("botao_ativo");
+  });
 });
+
+document.getElementById("inactive").addEventListener("click", () => {
+  const quadrados = document.querySelectorAll(".Quadrados");
+  const checkbox = document.querySelectorAll(".meuToggle");
+
+  quadrados.forEach((quadrado, index) => {
+    if (checkbox[index] && !checkbox[index].checked) {
+      quadrado.style.display = "flex"; // Mostra os desmarcados
+    } else {
+      quadrado.style.display = "none"; // Esconde os marcados
+    }
+
+    document.getElementById("inactive").classList.add("botao_ativo");
+
+    document.getElementById("active").classList.remove("botao_ativo");
+    document.getElementById("All").classList.remove("botao_ativo");
+  });
+});
+
+
+document.getElementById("All").addEventListener("click", () => {
+  const quadrados = document.querySelectorAll(".Quadrados");
+  quadrados.forEach((quadrado) => {
+    quadrado.style.display = "flex"; 
+    });     
+
+    document.getElementById("All").classList.add("botao_ativo");
+
+    document.getElementById("inactive").classList.remove("botao_ativo");
+    document.getElementById("active").classList.remove("botao_ativo");
+  });
 
 
 const botoes = document.querySelectorAll('.remove');
 
 botoes.forEach(function(botao) {
   botao.addEventListener('click', function() {
-    botao.classList.toggle('active');
+    const quadrado = botao.closest('.Quadrados'); // Encontra o contêiner pai mais próximo com a classe .Quadrados
+    if (quadrado) {
+      quadrado.style.display = "none";
+    }
   });
 });
 
