@@ -15,11 +15,31 @@ document.getElementById('Modo').addEventListener('click', function () {
     }
 });
 
+document.getElementById("active").addEventListener("click", () => {
+  const quadrados = document.querySelectorAll(".Quadrados");
+  const checkbox = document.querySelectorAll(".meuToggle"); 
+
+  quadrados.forEach((quadrado, index) => {
+
+    if (checkbox[index] && checkbox[index].checked) {
+      quadrado.style.display = "flex";
+    } else {
+      quadrado.style.display = "none";
+    }
+  });
+
+  document.getElementById("All").addEventListener("click", () => {
+    quadrados.forEach((quadrado) => {
+      quadrado.style.display = "flex"; // ou "flex", "grid" dependendo do layout
+      });
+    });
+});
+
+
 const botoes = document.querySelectorAll('.remove');
 
 botoes.forEach(function(botao) {
   botao.addEventListener('click', function() {
-
     botao.classList.toggle('active');
   });
 });
