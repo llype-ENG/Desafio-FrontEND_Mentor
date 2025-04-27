@@ -15,10 +15,10 @@ body{
 }
 
 .central{
-width: 80vw;
-height: 100vh;
-margin: auto;
-flex: 1;
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    flex: 1;
 }
 
 .cabecalho{
@@ -233,4 +233,80 @@ body.ModoEscuro input:checked + .slider{
     align-items: center;
     justify-content: center;
     gap: 3px;
+}
+@media screen and (max-width:1000px) {
+    .Quadrados{
+        font-size: 30px;
+        height: 250px;
+    }
+    .Quadrados p{
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 720px) {
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Quadrados{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 80%;
+        height: 200px;
+    }
+    .buttonContainer {
+        width: 100%;                  /* ocupa toda a largura do Quadrados */
+        display: flex;                 /* vira flexbox */
+        justify-content: space-between;/* empurra um botão para cada lado */
+        margin-top: 20px;              /* espaço acima, separando dos textos */
+    }
+    
+    .buttonContainer button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .Quadrados p{
+        font-size: 14px;
+    }
+    .Titulo_Funcoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+@media screen and (max-width:440px) {
+    .Quadrados p{
+        font-size: 14px;
+    }
+    .Titulo_Funcoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 7px;
+    }
+    .attribution{
+        display: block;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .attribution p{
+        font-size: 12px;
+        font-weight: 200;
+    }
+    .attribution a{
+        font-size: 12px;
+        font-weight: 200;
+    }
 }
