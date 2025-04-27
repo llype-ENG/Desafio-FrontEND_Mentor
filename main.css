@@ -335,6 +335,7 @@ body.ModoEscuro input:checked + .slider {
     }
     .butoes_alteracao button {
         width: 100px;
+        color: #040918;
     }
     .attribution {
         margin-top: 20px;
@@ -342,5 +343,9 @@ body.ModoEscuro input:checked + .slider {
     .attribution p, .attribution a {
         font-size: 12px;
         font-weight: 200;
+    }
+    .botao_ativo {
+        background-color: hsl(3, 77%, 44%) !important;
+        color: white;
     }
 }
