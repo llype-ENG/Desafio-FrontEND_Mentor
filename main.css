@@ -49,14 +49,15 @@ body{
     margin-top: 50px;
     padding: 10px;
 }
-.Titulo_Funcoes button{
+
+.butoes_alteracao button{
     padding: 15px;
     border-radius: 40px;
-    background-color: white;
-    border: 1px solid #ccc; 
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #a7a0a0; 
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 80px;
+    width: 100px;
 }
 .Titulo_Funcoes button:hover{
     border: 1px solid hsl(3, 86%, 64%);
@@ -70,6 +71,7 @@ body{
     justify-content: center;
     flex-direction: row;
     gap: 7px;
+    padding: 20px;
 }
 
 .main {
@@ -294,24 +296,28 @@ body.ModoEscuro input:checked + .slider{
         flex-direction: column;
         gap: 7px;
     }
-    .remove button{
+    .remove{
         padding: 10px;
         border-radius: 50px;
         background-color: white;
         border: 1px solid #ccc; 
         cursor: pointer;
         transition: all 0.3s ease;
-        color: hsl(226, 11%, 37%);
     }
     .butoes_alteracao button{
         padding: 15px;
         border-radius: 40px;
-        background-color: white;
-        color:hsl(226, 11%, 37%) ;
-        border: 1px solid #ccc; 
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #a7a0a0; 
         cursor: pointer;
         transition: all 0.3s ease;
-        width: 80px;
+        width: 100px;
+    }
+    .Titulo_Funcoes button:hover{
+        border: 1px solid hsl(3, 86%, 64%);
+        background-color: hsl(0, 0%, 93%);
+        transform: scale(1.03);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
     .attribution{
         display: block;
