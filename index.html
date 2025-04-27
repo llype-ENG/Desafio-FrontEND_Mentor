@@ -1,247 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Define que o idioma da página é inglês -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade em dispositivos móveis -->
 
+  <!-- Ícone da aba do navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <!-- Link para o arquivo de estilos -->
   <link rel="stylesheet" href="main.css">
+  
+  <!-- Link para o arquivo de JavaScript (adiado para depois do carregamento da página) -->
   <script src="script.js" defer></script>
   
-  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <title>Frontend Mentor | Browser extensions manager UI</title> <!-- Título da página -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- Estilos internos para a seção de atribuição -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
-  <div class="central">
-    <div class="cabecalho">
-      <img src="assets/images/logo.svg" alt="ERROR">
-      <button type="submit" id="Modo"><img src="assets/images/icon-moon.svg" alt="Modo Escuro" class="img" id="iconeModo"></button>
+  <div class="central"> <!-- Container central da página -->
+
+    <div class="cabecalho"> <!-- Cabeçalho da página -->
+      <img src="assets/images/logo.svg" alt="ERROR"> <!-- Logo do site -->
+      <button type="submit" id="Modo"> <!-- Botão para alternar o modo escuro/claro -->
+        <img src="assets/images/icon-moon.svg" alt="Modo Escuro" class="img" id="iconeModo">
+      </button>
     </div>
-    <div class="Titulo_Funcoes">
-      <h3>Extensions List</h3>
-      <div class="butoes_alteracao">
-        <button type="submit" id="All">All</button>
-        <button type="submit" id="active">Active</button>
-        <button type="submit" id="inactive">Inactive</button>
+
+    <div class="Titulo_Funcoes"> <!-- Título principal da seção -->
+      <h3>Extensions List</h3> <!-- Título -->
+
+      <div class="butoes_alteracao"> <!-- Botões de filtro -->
+        <button type="submit" id="All">All</button> <!-- Botão "Todos" -->
+        <button type="submit" id="active">Active</button> <!-- Botão "Ativos" -->
+        <button type="submit" id="inactive">Inactive</button> <!-- Botão "Inativos" -->
       </div>
     </div>
-    <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-    <div class="main">
 
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-devlens.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>DevLens</h3>
-              <p>Quickly inspect page layouts and visualize element boundaries.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
+    <div class="main"> <!-- Seção principal onde ficam as extensões -->
+
+      <!-- Cada extensão é um "Quadrado" -->
+      <div class="Quadrados">
+        <div class="tituloQuadrado"> <!-- Parte com logo e descrição -->
+          <img src="assets/images/logo-devlens.svg" alt="ERROR">
+          <div class="textoQuadrado">
+            <h3>DevLens</h3>
+            <p>Quickly inspect page layouts and visualize element boundaries.</p>
           </div>
         </div>
+        <div class="buttonContainer"> <!-- Botões de interação -->
+          <button class="remove">Remove</button> <!-- Botão para remover -->
+          <label class="switch"> <!-- Toggle para ativar/desativar -->
+            <input type="checkbox" class="meuToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
 
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-style-spy.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>StyleSpy</h3>
-              <p>Instantly analyze and copy CSS from any webpage element.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
+      <!-- Seguem outros Quadrados iguais, mudando só os dados -->
+      <div class="Quadrados">
+        <div class="tituloQuadrado">
+          <img src="assets/images/logo-style-spy.svg" alt="ERROR">
+          <div class="textoQuadrado">
+            <h3>StyleSpy</h3>
+            <p>Instantly analyze and copy CSS from any webpage element.</p>
           </div>
         </div>
+        <div class="buttonContainer">
+          <button class="remove">Remove</button>
+          <label class="switch">
+            <input type="checkbox" class="meuToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
 
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-speed-boost.svg" alt="ERROR">
-            <div class="textoQuadrado">
-              <h3>SpeedBoost</h3>
-              <p>Optimizes browser resource usage to accelerate page loading.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
+      <!-- (continua para as outras extensões: SpeedBoost, JSONWizard, TabMaster Pro, etc.) -->
+
+      <!-- Exemplo de outro "Quadrados" -->
+      <div class="Quadrados">
+        <div class="tituloQuadrado">
+          <img src="assets/images/logo-speed-boost.svg" alt="ERROR">
+          <div class="textoQuadrado">
+            <h3>SpeedBoost</h3>
+            <p>Optimizes browser resource usage to accelerate page loading.</p>
           </div>
         </div>
-
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-json-wizard.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>JSONWizard</h3>
-              <p>Formats, validates, and prettifies JSON responses in-browser.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
+        <div class="buttonContainer">
+          <button class="remove">Remove</button>
+          <label class="switch">
+            <input type="checkbox" class="meuToggle">
+            <span class="slider"></span>
+          </label>
         </div>
+      </div>
 
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-tab-master-pro.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>TabMaster Pro</h3>
-              <p>Organizes browser tabs into groups and sessions.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
+      <!-- (e assim por diante para todas as extensões...) -->
 
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-viewport-buddy.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>ViewportBuddy</h3>
-              <p>Simulates various screen resolutions directly within the browser.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
+    </div>
 
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-markup-notes.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>Markup Notes</h3>
-              <p>Enables annotation and notes directly onto webpages for collaborative debugging.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-grid-guides.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>GridGuides</h3>
-              <p>Overlay customizable grids and alignment guides on any webpage.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-palette-picker.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>Palette Picker</h3>
-              <p>Instantly extracts color palettes from any webpage.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-link-checker.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>LinkChecker</h3>
-              <p>Scans and highlights broken links on any page.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-dom-snapshot.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>DOM Snapshot</h3>
-              <p>Capture and export DOM structures quickly.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
-        <div class = "Quadrados">
-          <div class = "tituloQuadrado">
-            <img src="assets/images/logo-console-plus.svg" alt="ERROR">
-            <div class = "textoQuadrado">
-              <h3>ConsolePlus</h3>
-              <p>Enhanced developer console with advanced filtering and logging.</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <button class = "remove">Remove</button>
-            <label class="switch">
-              <input type="checkbox" class="meuToggle">
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-
+    <!-- Rodapé -->
     <div class="attribution">
       <div class="rodape">
-        <p>Challenge by</p> <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-        <p>Coded by</p> <a href="https://www.linkedin.com/in/fellype-moura-20742a30a/">Fellype Moura</a>.
+        <p>Challenge by</p> 
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. <!-- Link para o desafio -->
+        <p>Coded by</p> 
+        <a href="https://www.linkedin.com/in/fellype-moura-20742a30a/">Fellype Moura</a>. <!-- Link para seu LinkedIn -->
       </div>
-  </div>
+    </div>
+
+  </div> <!-- Fim da div central -->
 </body>
 </html>

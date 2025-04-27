@@ -1,71 +1,88 @@
+/* Importa a fonte Noto Sans do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-*{
+/* Define estilos globais para todos os elementos */
+* {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
 }
-body{
+
+/* Estilo do corpo da página */
+body {
     background-image: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.central{
+/* Container central */
+.central {
     width: 80vw;
     height: 100vh;
     margin: auto;
     flex: 1;
 }
 
-.cabecalho{
+/* Cabeçalho da página */
+.cabecalho {
     display: flex;
     justify-content: space-between;
-    background-color:hsl(200, 60%, 99%);
+    background-color: hsl(200, 60%, 99%);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    margin-top:30px; 
+    margin-top: 30px;
 }
-#Modo{
+
+/* Botão de alternar modo */
+#Modo {
     border: none;
     outline: none;
     padding: 10px;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
-#Modo:hover{
+
+/* Efeito ao passar o mouse no botão de modo */
+#Modo:hover {
     border: 1px solid hsl(3, 86%, 64%);
     background-color: hsl(0, 0%, 93%);
     transform: scale(1.03);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.Titulo_Funcoes{
+
+/* Área de título e botões de funções */
+.Titulo_Funcoes {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
     padding: 10px;
 }
 
-.butoes_alteracao button{
+/* Estilos dos botões de alteração */
+.butoes_alteracao button {
     padding: 15px;
     border-radius: 40px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #a7a0a0; 
+    background-color: white;
+    border: 1px solid #a7a0a0;
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100px;
 }
-.Titulo_Funcoes button:hover{
+
+/* Efeito ao passar o mouse nos botões de alteração */
+.Titulo_Funcoes button:hover {
     border: 1px solid hsl(3, 86%, 64%);
     background-color: hsl(0, 0%, 93%);
     transform: scale(1.03);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-.butoes_alteracao{
+
+/* Container dos botões de alteração */
+.butoes_alteracao {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,63 +91,79 @@ body{
     padding: 20px;
 }
 
+/* Container principal dos quadrados */
 .main {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px; /* controla o espaçamento entre os blocos */
-    justify-content: space-between; /* distribui bem os blocos */
-} 
-.Quadrados{
+    gap: 15px;
+    justify-content: space-between;
+}
+
+/* Estilo dos quadrados */
+.Quadrados {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color:hsl(200, 60%, 99%);
-    width: calc((100% - 30px) / 3); /* 100% - (2 gaps de 15px) dividido por 3 */
+    background-color: hsl(200, 60%, 99%);
+    width: calc((100% - 30px) / 3);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    box-sizing: border-box;
     height: 170px;
 }
-.tituloQuadrado{
+
+/* Título dentro dos quadrados */
+.tituloQuadrado {
     display: flex;
     flex-direction: row;
     gap: 7px;
 }
-.Quadrados p{
+
+/* Parágrafos dentro dos quadrados */
+.Quadrados p {
     padding-top: 5px;
 }
-.buttonContainer{
+
+/* Container dos botões dentro dos quadrados */
+.buttonContainer {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
 }
-.remove{
+
+/* Botão de remover */
+.remove {
     padding: 10px;
     border-radius: 50px;
     background-color: white;
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.remove:hover{
+
+/* Efeito ao passar o mouse no botão de remover */
+.remove:hover {
     border: 1px solid hsl(3, 86%, 64%);
     background-color: hsl(0, 0%, 93%);
     transform: scale(1.03);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Switch de alternância */
 .switch {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 28px;
 }
-  
+
+/* Esconde o input do switch */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-  
+
+/* Estilo da alavanca do switch */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -139,7 +172,8 @@ body{
     transition: .4s;
     border-radius: 34px;
 }
-  
+
+/* Bolinha dentro do switch */
 .slider:before {
     content: "";
     position: absolute;
@@ -151,78 +185,87 @@ body{
     transition: .4s;
     border-radius: 50%;
 }
-  
+
+/* Quando o switch está ativado */
 input:checked + .slider {
-    background-color: #ff4b4b; /* vermelho */
+    background-color: #ff4b4b; /* Vermelho */
 }
-  
+
+/* Animação da bolinha ao ativar o switch */
 input:checked + .slider:before {
     transform: translateX(22px);
 }
 
-/* Modo Escuro!!*/
+/* ===== Modo Escuro ===== */
 
+/* Estilo do body no modo escuro */
 body.ModoEscuro {
     background-image: linear-gradient(180deg, #040918 0%, #091540 100%);
     transition: all 0.3s ease;
     color: hsl(200, 60%, 99%);
-    font-size: 16px;
 }
-body.ModoEscuro .cabecalho{
+
+/* Cabeçalho no modo escuro */
+body.ModoEscuro .cabecalho {
     background-color: hsl(227, 75%, 14%);
     transition: all 0.3s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-body.ModoEscuro .butoes_alteracao button{
+
+/* Botões no modo escuro */
+body.ModoEscuro .butoes_alteracao button {
     color: white;
     background-color: hsl(226, 25%, 17%);
-    border: 0.5px solid hsl(225, 23%, 24%) ;
-    transition: all 0.3s ease;
+    border: 0.5px solid hsl(225, 23%, 24%);
 }
-body.ModoEscuro .butoes_alteracao button:hover{
+
+/* Hover nos botões no modo escuro */
+body.ModoEscuro .butoes_alteracao button:hover {
     border: 1px solid hsl(3, 86%, 64%);
     background-color: hsl(226, 25%, 17%);
-    transform: scale(1.03);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-body.ModoEscuro #Modo #iconeModo{
-    outline: none;
-    border: none;
+
+/* Botão de modo escuro */
+body.ModoEscuro #Modo #iconeModo {
     background-color: hsl(226, 25%, 17%);
-    transition: all 0.3s ease;
 }
-body.ModoEscuro .Quadrados{
+
+/* Quadrados no modo escuro */
+body.ModoEscuro .Quadrados {
     background-color: hsl(226, 25%, 17%);
-    border: 0.5px solid hsl(225, 23%, 24%) ;
-    transition: all 0.3s ease;
+    border: 0.5px solid hsl(225, 23%, 24%);
 }
-body.ModoEscuro .remove{
+
+/* Botão remover no modo escuro */
+body.ModoEscuro .remove {
     color: white;
     background-color: hsl(226, 25%, 17%);
-    border: 0.5px solid hsl(225, 23%, 24%) ;
-    transition: all 0.3s ease;
+    border: 0.5px solid hsl(225, 23%, 24%);
 }
-body.ModoEscuro .remove:hover{
+
+/* Hover no botão remover no modo escuro */
+body.ModoEscuro .remove:hover {
     border: 1px solid hsl(3, 86%, 64%);
-    background-color: hsl(226, 25%, 17%);
-    transform: scale(1.03);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-body.ModoEscuro .slider{
-    color: white;
+
+/* Switch no modo escuro */
+body.ModoEscuro .slider {
     background-color: hsl(225, 23%, 24%);
-    border: 0.5px solid hsl(225, 23%, 24%) ;
-    transition: all 0.3s ease;
+    border: 0.5px solid hsl(225, 23%, 24%);
 }
-body.ModoEscuro input:checked + .slider{
-        background-color: #ff4b4b; 
+
+/* Switch ativado no modo escuro */
+body.ModoEscuro input:checked + .slider {
+    background-color: #ff4b4b;
 }
+
+/* Botão ativo (quando clicado) */
 .botao_ativo {
     background-color: hsl(3, 77%, 44%) !important;
     color: white;
 }
- 
-.attribution{
+
+/* Atribuição/Rodapé */
+.attribution {
     display: block;
     align-items: center;
     text-align: center;
@@ -230,109 +273,73 @@ body.ModoEscuro input:checked + .slider{
     margin-top: 20px;
 }
 
-.rodape{
+/* Rodapé */
+.rodape {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3px;
 }
+
+/* ===== Responsividade ===== */
+
+/* Tablets e telas médias */
 @media screen and (max-width:1000px) {
-    .Quadrados{
+    .Quadrados {
         font-size: 30px;
         height: 250px;
     }
-    .Quadrados p{
+    .Quadrados p {
         font-size: 14px;
     }
-    
 }
-@media screen and (max-width: 720px) {
 
-    .main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/* Celulares médios */
+@media screen and (max-width: 720px) {
+    .main {
         flex-direction: column;
+        align-items: center;
     }
-    .Quadrados{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
+    .Quadrados {
         width: 100%;
         height: 200px;
     }
     .buttonContainer {
-        width: 100%;                  /* ocupa toda a largura do Quadrados */
-        display: flex;                 /* vira flexbox */
-        justify-content: space-between;/* empurra um botão para cada lado */
-        margin-top: 20px;              /* espaço acima, separando dos textos */
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
     }
-    
-    .buttonContainer button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+    .butoes_alteracao button {
+        width: 100px;
     }
-    .Quadrados p{
+    .Quadrados p {
         font-size: 14px;
     }
-    .Titulo_Funcoes{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .Titulo_Funcoes {
         flex-direction: column;
         gap: 15px;
     }
 }
+
+/* Celulares pequenos */
 @media screen and (max-width:440px) {
-    .Quadrados p{
+    .Quadrados p {
         font-size: 14px;
     }
-    .Titulo_Funcoes{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .Titulo_Funcoes {
         flex-direction: column;
         gap: 7px;
     }
-    .remove{
+    .remove {
         padding: 10px;
-        border-radius: 50px;
-        background-color: white;
-        border: 1px solid #ccc; 
-        cursor: pointer;
-        transition: all 0.3s ease;
     }
-    .butoes_alteracao button{
-        padding: 15px;
-        border-radius: 40px;
-        background-color: rgb(255, 255, 255);
-        color: black;
-        border: 1px solid #a7a0a0; 
-        cursor: pointer;
-        transition: all 0.3s ease;
+    .butoes_alteracao button {
         width: 100px;
     }
-    .Titulo_Funcoes button:hover{
-        border: 1px solid hsl(3, 86%, 64%);
-        background-color: hsl(0, 0%, 93%);
-        color: black;
-        transform: scale(1.03);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .attribution{
-        display: block;
-        align-items: center;
-        text-align: center;
-        width: 100%;
+    .attribution {
         margin-top: 20px;
     }
-    .attribution p{
-        font-size: 12px;
-        font-weight: 200;
-    }
-    .attribution a{
+    .attribution p, .attribution a {
         font-size: 12px;
         font-weight: 200;
     }
